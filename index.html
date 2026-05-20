@@ -974,6 +974,7 @@
       .hero-buttons { flex-direction: column; align-items: center; }
     }
   </style>
+
 </head>
 <body>
 
@@ -1260,6 +1261,7 @@
             <div class="form-success" id="form-success">
               ✅ Message sent! I'll get back to you soon.
             </div>
+            <form action=https://formspree.io/f/maqkeopk method="POST" onsubmit="showSuccessMessage()">
           </form>
         </div>
       </div>
@@ -1281,6 +1283,13 @@
   </footer>
 
   <!-- ===== JAVASCRIPT ===== -->
+  <script>
+function showSuccessMessage() {
+  setTimeout(() => {
+    document.getElementById('form-success').style.display = 'block';
+  }, 500);
+}
+</script>
   <script>
     // ===== THEME TOGGLE =====
     const root = document.documentElement;
@@ -1381,5 +1390,7 @@
       alert('📄 To enable CV download: Replace the href="#" in the Download CV button with your actual resume file link (e.g., "./resume.pdf" or a Google Drive share link).');
     });
   </script>
+
 </body>
+
 </html>
