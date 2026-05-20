@@ -1261,8 +1261,11 @@
             <div class="form-success" id="form-success">
               ✅ Message sent! I'll get back to you soon.
             </div>
-            <form action=https://formspree.io/f/maqkeopk method="POST" onsubmit="showSuccessMessage()">
+            <form action=https://formspree.io/f/maqkeopk method="POST" target="hidden_iframe"
+  onsubmit="document.getElementById('form-success').style.display='block'; this.reset(); return false;"
+>
           </form>
+          <iframe name="hidden_iframe" style="display:none;"></iframe>
         </div>
       </div>
     </div>
